@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Georgia', 'Times New Roman', Times, serif, cursive;
+}
+
+body {
+  height: 1080px;
+  width: 100%;
+  background-image: url("rainsha.e.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+ div{text-align: center;}}
+
+paragraph-1 {
+  font-family:Arial, Helvetica, sans-serif
+}
