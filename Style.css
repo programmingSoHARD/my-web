@@ -1,18 +1,65 @@
 * {
-  margin: 0;
-  padding: 0;
+  margin-left: 0;
+  padding:0;
   font-family: 'Georgia', 'Times New Roman', Times, serif, cursive;
 }
 
 body {
-  height: 1080px;
-  width: 100%;
-  background-image: url("rainsha.e.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
- div{text-align: center;}}
+    height: 1080px;
+    width: 100%;
+    background-image: url("rainsha.e.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    div{text-align: center;
+        font-family: cursive;}
+    display: flex;
+
+    div{
+      color: rgb(255,255,255)
+    } 
+
+
+
+    nav {
+      /*float: left;*/
+      position: fixed;
+      display: inline-block;
+      top: 0; /* Position it at the top of the viewport */
+      width: 100%; /* Make it span the entire width of the viewport */
+      background-color: #333; /* Add a background color */
+      /* padding: 20px 0; /* Add some padding */
+      margin:auto;
+    }
+
+    ul {
+      list-style-type: none; /* Remove default list styles */
+      margin-right: 0;
+      padding: 0;
+    }
+
+    li {
+      display: inline-block; /* Display list items horizontally */
+      margin-right: 20px; /* Add some space between list items */
+      color: white; /* Text color */
+      font-size: 20px; /* Font size */
+    }
+
+    /* Optional: Style the links */
+    li a {
+      color: white; /* Link color */
+    }
+}
 
 paragraph-1 {
   font-family:Arial, Helvetica, sans-serif
+}
+
+
+.rainsha {
+  font-size: 50px;
+  justify-content: center;
+  align-items: center;
+  margin:auto;
 }
