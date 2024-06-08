@@ -1,20 +1,187 @@
 <!DOCTYPE html>
-<html lang="en"> 
-<link rel="stylesheet" type="text/css" href="Style.css">
+<html lang="en">
 <head>
-  <title>Its interesting!</title> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Come and see :D</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="html" type="html" href="about.html">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    #MainPage {
+      height: 100vh; /* Full viewport height */
+      position: relative;
+    }
+    
+    #About {
+      height: 100vh; /* Full viewport height */
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Georgia', 'Times New Roman', Times, serif;
+    }
+
+    body {
+      width: 100%;
+      position: relative;
+      background: #f3f3f3;
+      overflow-x: hidden;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #333;
+      z-index: 1000;
+    }
+
+    .navbar .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .navbar-nav {
+      list-style-type: none;
+      display: flex;
+    }
+
+    .navbar-nav li {
+      margin-right: 20px;
+    }
+
+    .navbar-nav li a {
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+    }
+
+    .hero {
+      width: 800px;
+      height: 480px;
+      background: url('Screenshot.png') no-repeat center center;
+      background-size: cover;
+      position: absolute;
+      top: 40%;
+      left: -5%; /* Move more to the left */
+      transform: translate(0, -50%);
+      border: 10px solid #fff;
+      border-radius: 0;
+      overflow: hidden;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    .second-box {
+      width: 300px;
+      height: 300px;
+      background-color: #307581;
+      color: white;
+      position: absolute;
+      top: calc(50% + 100px); /* Adjust position below the first box */
+      left: calc(-20% + 850px); /* Adjust position to the right of the first box */
+      transform: translate(0, -50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 10px solid #fff;
+      border-radius: 0;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+      z-index: 1;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+
+    .text-content h1 {
+      font-size: 2em;
+    }
+
+    .overlay {
+      text-align: center;
+      color: white;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+    }
+
+    .overlay h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    .appointment-btn {
+      padding: 10px 20px;
+      background-color: #333;
+      color: white;
+      text-decoration: none;
+      font-size: 1.2em;
+      border-radius: 5px;
+    }
+
+    .content {
+      width: 80%;
+      margin-top: 30%;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #ffffff;
+      text-align: right;
+      z-index: 2;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a>about</a></li>
-        <li><a>How to play</a></li>
-      </ul>
+    <nav class="navbar" role="navigation" id="navbar">
+      <div class="container">
+        <div class="navbar-links">
+          <ul class="navbar-nav">
+            <li><a href="#MainPage">Home</a></li>
+            <li><a href="#About">About</a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
-  </header> 
-<div class="rainsha">RAINSHA</div>
+  </header>
 
+  <!-- Main Page -->
+  <div class="content" id="MainPage">
+    <h2>Main Page</h2>
+    <a href="#About"></a>
+    <div class="hero">
+      <img src="Screenshot.png.png" alt="map">
+      <div class="overlay">
+        <!-- Your overlay content here -->
+      </div>
+    </div>
+
+    <div class="second-box">
+      <div class="text-content">
+        <h1>RAINSHA</h1>
+      </div>
+    </div>
+
+    <p>Let's join in this Adventure!!</p>
+  </div>
+
+  <!-- Next Page -->
+  <div class="content" id="About">
+    <h1 class="title">Rainsha is a game created by.. Genesis matrix</h1>
+    <h2>Section 2</h2>
+    <a href="#MainPage"></a>
+    <p>This video gives an explanation of the game by one of the creators</p>
+    <div class="content2" id="content2">
+      <iframe width="600" height="350" src="https://www.youtube.com/embed/gQ0-ip-B36A" frameborder="0" allowfullscreen></iframe><br>
+      <div id="demo-vid" class="vid">
+        <p>This is a demo of the game</p>
+        <iframe width="600" height="350" src="https://www.youtube.com/embed/g1YpYgH_xDA" frameborder="0" allowfullscreen style="margin-top: 20px;"></iframe>
+      </div> 
+    </div>
+  </div>
 </body>
 </html>
