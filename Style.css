@@ -4,11 +4,16 @@
   box-sizing: border-box;
   font-family: 'Georgia', 'Times New Roman', Times, serif;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
-  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Georgia', 'Times New Roman', Times, serif;
   position: relative;
-  background: #f3f3f3;
   overflow-x: hidden;
 }
 
@@ -42,15 +47,26 @@ header {
   font-size: 20px;
 }
 
+#MainPage {
+  height: 100%; /* Full viewport height */
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  /* background: linear-gradient(to right, rgba(0,0,0,0.7), transparent), url('mush.jpeg') no-repeat; */
+  background-size: cover;
+}
+
+#About {
+  height: 100vh; /* Full viewport height */
+  position: relative;
+}
+
 .hero {
-  width: 800px;
-  height: 480px;
+  width: 100%; /* Full width */
+  height: 600px;
   background: url('Screenshot.png') no-repeat center center;
   background-size: cover;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translate(0, -50%);
+  position: relative;
   border: 10px solid #fff;
   border-radius: 0;
   overflow: hidden;
@@ -59,14 +75,15 @@ header {
 }
 
 .second-box {
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
   background-color: #307581;
   color: white;
   position: absolute;
   top: calc(50% + 100px);
-  left: calc(0% + 850px);
-  transform: translate(0, -50%);
+  left: calc(50% - 800px); /* Adjusted value to move the box more to the left */
+  margin-left: -5%;
+  transform: translate(-50%, -50%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -78,7 +95,7 @@ header {
 }
 
 .text-content h1 {
-  font-size: 2em;
+  font-size: 4em;
 }
 
 .overlay {
@@ -107,7 +124,43 @@ header {
   margin-top: 30%;
   margin: 50px auto;
   padding: 20px;
-  background-color: #ffffff;
   text-align: right;
   z-index: 2;
 }
+
+.background-half {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-image: url('mush.jpeg');
+  background-size: cover;
+  z-index: 0;
+  opacity: 0.5; /* Adjust opacity as needed */
+}
+
+.adventure-text {
+  position: absolute;
+      bottom: 20px;
+      left: 10%;
+      transform: translateX(-50%);
+      z-index: 2;
+      color: white; /* Adjust text color as needed */
+      text-align: center;
+  }
+
+  .additional-text {
+    
+    position: absolute;
+    top: 40%;
+    left: 69%; /* Align it to the right of the screen */
+    transform: translateY(-50%);
+    max-width: 30%; /* Ensure the text doesn't exceed 40% of the viewport width */
+    padding: 20px; /* Add padding */
+    z-index: 1;
+    text-align: right; /* Align text to the right */
+    color: black;
+    word-wrap: break-word;
+    font-size:40px ;
+  }

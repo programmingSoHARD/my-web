@@ -6,21 +6,13 @@
   <title>Come and see :D</title>
   <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="html" type="html" href="about.html">
+
   <style>
     html {
       scroll-behavior: smooth;
     }
-    
-    #MainPage {
-      height: 100vh; /* Full viewport height */
-      position: relative;
-    }
-    
-    #About {
-      height: 100vh; /* Full viewport height */
-    }
 
-    * {
+    body, html {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -28,9 +20,6 @@
     }
 
     body {
-      width: 100%;
-      position: relative;
-      background: #f3f3f3;
       overflow-x: hidden;
     }
 
@@ -64,14 +53,38 @@
       font-size: 20px;
     }
 
-    .hero {
-      width: 800px;
-      height: 480px;
-      background: url('Screenshot.png') no-repeat center center;
+    #MainPage {
+      height: 100vh; /* Full viewport height */
+      position: relative;
+      overflow: hidden;
+    }
+
+    #MainPage::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%; /* Covers half of the screen */
+      height: 100%;
+      background: url('mush.jpeg') no-repeat center center;
       background-size: cover;
+      opacity: 0.4; /* Semi-transparent */
+      z-index: -1;
+    }
+    
+    #About {
+      height: 100vh; /* Full viewport height */
+      position: relative;
+    }
+
+    .hero {
+      width: 1000px; /* Increased width */
+      height: 600px; /* Increased height */
+      background: url('Screenshot.png.png') no-repeat center center;
+      background-size: cover; /* Ensures the image covers the entire div */
       position: absolute;
       top: 40%;
-      left: -5%; /* Move more to the left */
+      left: 5%; /* Move more to the left */
       transform: translate(0, -50%);
       border: 10px solid #fff;
       border-radius: 0;
@@ -81,14 +94,14 @@
     }
 
     .second-box {
-      width: 300px;
-      height: 300px;
+      width: 400px; /* Increased width */
+      height: 400px; /* Increased height */
       background-color: #307581;
       color: white;
       position: absolute;
-      top: calc(50% + 100px); /* Adjust position below the first box */
-      left: calc(-20% + 850px); /* Adjust position to the right of the first box */
-      transform: translate(0, -50%);
+      top: calc(30% + 100px); /* Adjust position below the first box */
+      left: 50%; /* Move more to the left */
+      transform: translate(0, 10%);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -100,7 +113,7 @@
     }
 
     .text-content h1 {
-      font-size: 2em;
+      font-size: 4em; /* Increased font size */
     }
 
     .overlay {
@@ -129,15 +142,45 @@
       margin-top: 30%;
       margin: 50px auto;
       padding: 20px;
-      background-color: #ffffff;
       text-align: right;
       z-index: 2;
+    }
+    
+    .additional-text {
+      margin-top: 50px; /* Adjust as needed to create space between existing content */
+      padding: 20px;
+      text-align: center;
+      z-index: 2;
+      background-color: white; /* Ensure the background is white */
+      position: relative; /* Keeps it in the normal flow of the document */
+    }
+
+    .background-half {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      background-image: url('mush.jpeg');
+      background-size: cover;
+      z-index: 0;
+      opacity: 0.5; /* Adjust opacity as needed */
+    }
+
+    .adventure-text {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      color: white; /* Adjust text color as needed */
+      text-align: center;
     }
   </style>
 </head>
 <body>
   <header>
-    <nav class="navbar" role="navigation" id="navbar">
+    <nav class="navbar" role = "navigation" id="navbar">
       <div class="container">
         <div class="navbar-links">
           <ul class="navbar-nav">
@@ -154,9 +197,8 @@
     <h2>Main Page</h2>
     <a href="#About"></a>
     <div class="hero">
-      <img src="Screenshot.png.png" alt="map">
       <div class="overlay">
-        <!-- Your overlay content here -->
+        
       </div>
     </div>
 
@@ -166,7 +208,17 @@
       </div>
     </div>
 
-    <p>Let's join in this Adventure!!</p>
+    <div class="adventure-text">
+      <p>Let's join in this Adventure!!</p>
+    </div>
+    
+    <div class="additional-text" id="additional-text">
+      <p> after 2122..the world was advancing at a pace never seen before.
+        Soon..the world became polluted, one by one getting corrupted. 
+        Spirit that was once so trusted turned against their owners. 
+        Humanity was almost hopeless.."rainsha" fought with endless abyss until.. a mysterious warrior came across a spirit trying to survive the abyss
+         Will they succeed? </p>
+    </div>
   </div>
 
   <!-- Next Page -->
@@ -179,8 +231,8 @@
       <iframe width="600" height="350" src="https://www.youtube.com/embed/gQ0-ip-B36A" frameborder="0" allowfullscreen></iframe><br>
       <div id="demo-vid" class="vid">
         <p>This is a demo of the game</p>
-        <iframe width="600" height="350" src="https://www.youtube.com/embed/g1YpYgH_xDA" frameborder="0" allowfullscreen style="margin-top: 20px;"></iframe>
-      </div> 
+        <iframe width="600" height="350" src="https://www.youtube.com/embed/g1YpYg"></iframe>
+      </div>
     </div>
   </div>
 </body>
