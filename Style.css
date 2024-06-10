@@ -56,18 +56,52 @@ header {
   /* Linear gradient to create the half-white and half-black effect */
   
 }
-#MainPage::before,
-#MainPage::after {
+
+#MainPage {
+  height: 100vh; /* Full viewport height */
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+#MainPage::before {
   content: "";
+  
   position: absolute;
   top: 0;
-  width: 50%; /* Covering half of the screen */
+  right: 0;
+  width: 50%; /* Covers half of the screen */
   height: 100%;
-  
+  background-image: url("mush.jpeg");
   background-size: cover;
-  background-image: linear-gradient("mush.jpeg" rgb(0, 0, 0));
+  opacity: 0.6; /* Adjust opacity as needed */
+  background-image:
+linear-gradient(to right, rgba(255, 249, 249, 0.52), rgba(0, 0, 0, 0.73)),
+url("mush.jpeg");
+ 
+  z-index: -1;
+  
+  
+}
+
+#MainPage::after {
+  content: "";
+  background-image: url("mush.jpeg");
+  background-size: cover;
+  opacity: 0.6; /* Adjust opacity as needed */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-image:
+linear-gradient(to right,rgba(255, 249, 249, 0.52)s, rgba(0, 0, 0, 0.73)),
+url("mush.jpeg");
+ 
+  
   z-index: -1;
 }
+
 
 #MainPage::before {
   left: 0;
