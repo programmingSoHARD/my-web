@@ -48,13 +48,60 @@ header {
 }
 
 #MainPage {
-  height: 100%; /* Full viewport height */
+  height: 100vh; /* Full viewport height */
   width: 100%;
   position: relative;
   overflow: hidden;
-  /* background: linear-gradient(to right, rgba(0,0,0,0.7), transparent), url('mush.jpeg') no-repeat; */
-  background-size: cover;
+  background: linear-gradient(to right, #fff 50%, #000 50%);
+  /* Linear gradient to create the half-white and half-black effect */
+  
 }
+#MainPage::before,
+#MainPage::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 50%; /* Covering half of the screen */
+  height: 100%;
+  
+  background-size: cover;
+  background-image: linear-gradient("mush.jpeg" rgb(0, 0, 0));
+  z-index: -1;
+}
+
+#MainPage::before {
+  left: 0;
+}
+
+#MainPage::after {
+  right: 0;
+}
+
+
+
+
+
+
+.auto-typing {
+  font-size: 24px;
+  font-family: 'Courier New', Courier, monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  width: 25ch; /* Adjust the width to fit your text */
+  animation: typing 4s steps(25) 1s 1 normal both, blinkCursor 500ms steps(25) infinite normal;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 25ch; }
+}
+
+@keyframes blinkCursor {
+  from { border-right-color: rgba(255, 255, 255, 0.75); }
+  to { border-right-color: transparent; }
+}
+
 
 #About {
   height: 100vh; /* Full viewport height */
@@ -132,14 +179,13 @@ header {
   position: absolute;
   top: 0;
   left: 0;
-  width: 50%;
+  width: 50%; /* Covering half of the screen */
   height: 100%;
   background-image: url('mush.jpeg');
   background-size: cover;
-  z-index: 0;
+  z-index: 100; /* This puts it on top of the other background */
   opacity: 0.5; /* Adjust opacity as needed */
 }
-
 .adventure-text {
   position: absolute;
       bottom: 20px;
@@ -160,7 +206,13 @@ header {
     padding: 20px; /* Add padding */
     z-index: 1;
     text-align: right; /* Align text to the right */
-    color: black;
+    color: rgb(5, 4, 114);
     word-wrap: break-word;
     font-size:40px ;
+    font-family:SF Burlington Script;
   }
+  .content2 iframe {
+    display: inline-block;
+    margin-right: 20px; /* Add some space between the videos */
+  }
+  

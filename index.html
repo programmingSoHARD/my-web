@@ -55,25 +55,52 @@
 
     #MainPage {
       height: 100vh; /* Full viewport height */
+      width: 100%;
       position: relative;
       overflow: hidden;
     }
 
     #MainPage::before {
       content: "";
+      
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50%; /* Covers half of the screen */
+      height: 100%;
+      background-image: url("mush.jpeg");
+      background-size: cover;
+      opacity: 0.6; /* Adjust opacity as needed */
+      background-image:
+    linear-gradient(to right, rgba(255, 249, 249, 0.52), rgba(0, 0, 0, 0.73)),
+    url("mush.jpeg");
+     
+      z-index: -1;
+      
+      
+    }
+
+    #MainPage::after {
+      content: "";
+      background-image: url("mush.jpeg");
+      background-size: cover;
+      opacity: 0.6; /* Adjust opacity as needed */
       position: absolute;
       top: 0;
       left: 0;
-      width: 50%; /* Covers half of the screen */
+      width: 50%;
       height: 100%;
-      background: url('mush.jpeg') no-repeat center center;
-      background-size: cover;
-      opacity: 0.4; /* Semi-transparent */
+      background-image:
+    linear-gradient(to right,rgba(255, 249, 249, 0.52)s, rgba(0, 0, 0, 0.73)),
+    url("mush.jpeg");
+     
+      
       z-index: -1;
     }
-    
+  
+
     #About {
-      height: 100vh; /* Full viewport height */
+      height: 200vh; /* Full viewport height */
       position: relative;
     }
 
@@ -142,8 +169,6 @@
       margin-top: 30%;
       margin: 50px auto;
       padding: 20px;
-      text-align: right;
-      z-index: 2;
     }
     
     .additional-text {
@@ -156,16 +181,16 @@
     }
 
     .background-half {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 50%;
-      height: 100%;
-      background-image: url('mush.jpeg');
-      background-size: cover;
-      z-index: 0;
-      opacity: 0.5; /* Adjust opacity as needed */
-    }
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%; /* Covering half of the screen */
+  height: 100%;
+  background-image: url('mush.jpeg');
+  background-size: cover;
+  z-index: 100; /* This puts it on top of the other background */
+  opacity: 0.5; /* Adjust opacity as needed */
+}
 
     .adventure-text {
       position: absolute;
@@ -176,11 +201,16 @@
       color: white; /* Adjust text color as needed */
       text-align: center;
     }
+
+    .content2 iframe {
+      display: inline-block;
+      margin-right: 20px; /* Add space between the videos */
+    }
   </style>
 </head>
 <body>
   <header>
-    <nav class="navbar" role = "navigation" id="navbar">
+    <nav class="navbar" role="navigation" id="navbar">
       <div class="container">
         <div class="navbar-links">
           <ul class="navbar-nav">
@@ -213,11 +243,11 @@
     </div>
     
     <div class="additional-text" id="additional-text">
-      <p> after 2122..the world was advancing at a pace never seen before.
+      <!-- <p> after 2122..the world was advancing at a pace never seen before.
         Soon..the world became polluted, one by one getting corrupted. 
         Spirit that was once so trusted turned against their owners. 
         Humanity was almost hopeless.."rainsha" fought with endless abyss until.. a mysterious warrior came across a spirit trying to survive the abyss
-         Will they succeed? </p>
+         Will they succeed? </p> -->
     </div>
   </div>
 
@@ -231,9 +261,13 @@
       <iframe width="600" height="350" src="https://www.youtube.com/embed/gQ0-ip-B36A" frameborder="0" allowfullscreen></iframe><br>
       <div id="demo-vid" class="vid">
         <p>This is a demo of the game</p>
-        <iframe width="600" height="350" src="https://www.youtube.com/embed/g1YpYg"></iframe>
+        <iframe width="600" height="350" src="https://www.youtube.com/embed/g1YpYgH_xDA" frameborder="0" allowfullscreen></iframe>
       </div>
     </div>
   </div>
+
+  <!-- Link to external JavaScript file -->
+  <script src="app.js"></script>
 </body>
 </html>
+
