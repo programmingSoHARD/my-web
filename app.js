@@ -28,4 +28,24 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initiate the typing effect
     typeText(additionalTextElement, additionalText);
 });
- 
+
+/* Time Clock*/
+function updatedClock() {
+    const now =new Date();
+    const clock= document.getElementById("clock");
+    const formattedTime= now.toLocaleString();
+    clock.textContent=formattedTime;
+}
+function timeClock() {
+    updatedClock();
+    serInterval(updatedClock,1000);
+} 
+timeClock();
+/* image Slider */
+let slideIndex=0;
+const slides=documant.querySelectorAll('.character-slide');
+const indicatorsContainer= document.querySelector('.slider-indicators');
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn= document.querySelector('.next-btn');
+
+
