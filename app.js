@@ -17,10 +17,12 @@ function typeText(element, text, callback) {
 
 document.addEventListener('DOMContentLoaded', () => {
     const additionalTextElement = document.getElementById('additional-text');
-    const additionalText = `after 2122..the world was advancing at a pace never seen before. 
+    const additionalText = `after 2122...
+        the world was advancing at a pace never seen before. 
         Soon..the world became polluted, one by one getting corrupted. 
         Spirits that was once so trusted turned against their owners. 
-        Humanity was almost hopeless.."rainsha" fought with endless abyss until.. a mysterious warrior came across a spirit trying to survive the abyss.
+        Humanity was almost hopeless.."rainsha" fought with endless abyss until..
+         a mysterious warrior came across a spirit trying to survive the abyss.
         Will they succeed?`;
 
     // Initiate the typing effect
