@@ -1,55 +1,18 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
 <head>
-  <title>It's interesting!</title> 
-  <link rel="stylesheet" type="text/css" href="aboutstyle.css">
-  <link rel="html" type="html" href="index.html">
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-    
-    #MainPage {
-      height: 100%;
-    }
-    
-    #About {
-      height: 100%;
-   }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player with Navigation</title>
+    <link rel="stylesheet" href="aboutstyle.css">
 </head>
-
 <body>
-  <header>
-    <nav class="navbar" role="navigation" id="navbar">
-      <div class="container" style="width:100%">
-        <div class="navbar-header"> 
-        </div>
-        <div class="navbar-links">
-          <ul class="navbar-nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">about</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header> 
-
-  <div class="overlay"></div>
-  <div class="content" id="About">
-    <h1 class="title">Rainsha is a game created by..
-      Genesis matrix
-      </h1>
-      <h2>Section 2</h2>
-      <a href="#About">Click Me to Smooth Scroll to Section 1 Above</a>
-      <p1>This video gives an explanation of the game by one of the creators</p1>
-    <div class=content2 id="content2">
-      <iframe width="600" height="350" src="https://www.youtube.com/embed/gQ0-ip-B36A" frameborder="0" allowfullscreen></iframe><br>
-    <div id="demo-vid" class="vid">
-      <p2>This is a demo of the game</p2>
-      <iframe width="600" height="350" src="https://www.youtube.com/embed/g1YpYgH_xDA" frameborder="0" allowfullscreen style="margin-top: 20px;"></iframe>
-    </div> 
-  </div>
-</div>
+    <div class="video-player">
+        <button id="prev" class="nav-button">&lt;</button>
+        <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/gQ0-ip-B36A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <button id="next" class="nav-button">&gt;</button>
+    </div>
+    
+    <script src="exp.js"></script>
 </body>
 </html>

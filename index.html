@@ -6,6 +6,7 @@
   <title>Come and see :D</title>
   <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="html" type="html" href="about.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
   
@@ -70,22 +71,18 @@
         </div>
       </div>
     </nav>
-    <div class="deco" id="header .img">
-    <img src="result (1).png">
+    <div class="deco">
+      <img src="result (1).png" alt="Decoration">
     </div>
-
   </header>
 
   <!-- Main Page -->
   <div class="content" id="MainPage">
     <h2>Main Page</h2>
-    <a href="#About"></a>
     <div class="hero">
       <div class="overlay">
-        <div class="warrior" id="warrior"
-        ></div>
-      
-    </div>
+        <div class="warrior" id="warrior"></div>
+      </div>
     </div>
 
     <div class="second-box">
@@ -97,51 +94,39 @@
     <div class="adventure-text">
       <p>Let's join in this Adventure!!</p>
     </div>
-    
-    <div class="additional-text" id="additional-text">
-      <!-- <p> after 2122..the world was advancing at a pace never seen before.
-        Soon..the world became polluted, one by one getting corrupted. 
-        Spirit that was once so trusted turned against their owners. 
-        Humanity was almost hopeless.."rainsha" fought with endless abyss until.. a mysterious warrior came across a spirit trying to survive the abyss
-         Will they succeed? </p> -->
-    </div>
+
+    <div class="additional-text" id="additional-text"></div>
   </div>
 
-  <!-- Next Page -->
+  <!-- About Section -->
   <div class="content" id="About">
-    <h1 class="title">Rainsha is a game created by.. Genesis matrix</h1>
-    <h2>Section 2</h2>
-    <a href="#MainPage"></a>
-    <p>This video gives an explanation of the game by one of the creators</p>
-    <div class="content2" id="content2">
-      <iframe width="600" height="350" src="https://www.youtube.com/embed/gQ0-ip-B36A" frameborder="0" allowfullscreen></iframe><br>
-      <div id="demo-vid" class="vid">
-        <p>This is a demo of the game</p>
-        <iframe width="600" height="350" src="https://www.youtube.com/embed/g1YpYgH_xDA" frameborder="0" allowfullscreen></iframe>
-      </div>
+    <div class="video-player">
+      <button id="prev" class="nav-button">&lt;</button>
+      <iframe id="video" width="880" height="500" src="https://www.youtube.com/embed/gQ0-ip-B36A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <button id="next" class="nav-button">&gt;</button>
     </div>
+
+    <div class="bb" id="bb"></div>
   </div>
-  <!-- Characters Section -->
+
   <!-- Characters Section -->
   <div id="section-container">
     <div class="section-img-container">
       <div class="new-picture-with-text">
-        <img src="result.png" alt="Character Image">
-        
-        <div class="text-overlay"><p> Mysterious Warrior</p></div>
-        <div class="text-overlay2"><p>A samurai trying to survive in the abyss witha a spirit </p></div>
+        <img src="main2.png" alt="Character Image">
+        <div class="text-overlay">
+          <p> Mysterious Warrior<br> (main Character) </p>
+        </div>
+        <div class="text-overlay2">
+          <p>A samurai trying to survive in the abyss with a spirit</p>
+        </div>
       </div>
     </div>
   </div>
-  <div id="section-button-container">
-    <div class="section-button1 section-button"><a>1</a></div>
-    <div class="section-button2 section-button"><a>2</a></div>
-    <div class="section-button3 section-button"><a>3</a></div>
-    <div class="section-button4 section-button"><a>4</a></div>
-  </div>
 
-  <!-- Link to external JavaScript file -->
+  <!-- Overlapping Image -->
+  <div class="overlap-image"></div>
+
   <script src="app.js"></script>
 </body>
 </html>
-

@@ -95,13 +95,7 @@ header .deco img {
   linear-gradient(to right, rgba(245, 246, 252, 0.52), rgb(0, 0, 0)), url("mush.jpeg");
   z-index: -1;
  
-  /* background: linear-gradient(
-    to right, 
-    transparent 100%, 
-    rgba(0, 0, 0, 0) 100%), 
-    url("mush.jpeg") 
-    no-repeat;
-    z-index: -1; */
+  
 }
 
 
@@ -141,6 +135,7 @@ header .deco img {
 
 #About {
   height: 100vh; /* Full viewport height */
+  width:100% ;
   position: relative;
 }
 
@@ -250,8 +245,28 @@ header .deco img {
   }
   .content2 iframe {
     display: inline-block;
-    margin-right: 20px; /* Add some space between the videos */
+    margin-left: 50px; /* Add some space between the videos */
+    bottom:350px;
   }
+  .vid{
+    position: relative;
+    right:900px ;
+    bottom:350px;
+    
+
+  }
+  .bb{
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 500%; 
+    height:80%;
+    background-image: url('mush.jpeg');
+    background-size: cover;
+    z-index: -1; /* This puts it on top of the other background */
+    opacity: 0.4; /* Adjust opacity as needed */
+  }
+  
   .warrior {
     background-image:url("result.png");
     position:fixed;
@@ -275,25 +290,9 @@ header .deco img {
     margin: 20px auto; /* Added margin for spacing */
   }
   
-  #section-button-container {
-    width: 300px;
-    height: 30px;
-    margin: 10px auto; /* Added margin for spacing */
-    display: flex; /* Use flexbox to align buttons */
-    justify-content: center; /* Center the buttons */
-  }
   
-  .section-button {
-    background-color: #808000;
-    width: 30px;
-    height: 30px;
-    margin: 0 10px; /* Added margin between buttons */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-  }
-  
+   
+    
   .section-img-container {
     width: 1000px; /* Increased width */
     height: 600px; /* Increased height */
@@ -301,16 +300,7 @@ header .deco img {
     bottom: 10%;
     left: 5%; /* Move more to the left */
     bottom: 10%;
-    transform: translate(0, -50%);
-    border: 10px solid #fff;
-    border-radius: 0;
-    overflow: hidden;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
-    z-index: 1;
-    display: flex; /* To align the new content */
-    align-items: center; /* Center align vertically */
-    justify-content: center; /* Center align horizontally */
-    background-image: url("character.jpeg");
+    
   }
   
   .new-picture-with-text {
@@ -319,20 +309,21 @@ header .deco img {
   }
   
   .new-picture-with-text img {
-    width: 300px; /* Adjust width as needed */
+    width:120%; /* Adjust width as needed */
     height: auto; /* Maintain aspect ratio */
-    left:100% ;
+    right:50% ;
+    top: 1000px;;
     
   }
   
   .new-picture-with-text .text-overlay {
     position: absolute;
-    bottom:115%;
+    bottom:110%;
     left: -50%;
     
     transform: translateX(-50%);
-    color: white;
-    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: rgb(0, 0, 0);
+    
     
     font-size: 40px;
     border-radius: 5px;}
@@ -343,9 +334,81 @@ header .deco img {
       left: -50%;
       
       transform: translateX(-50%);
-      color: white;
-      background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+      color: rgb(0, 0, 0);
+      
       word-wrap: break-word;
       font-size: 20px;
       max-width: 90%; 
       border-radius: 5px;}
+
+      /* video */
+      
+      
+      .video-player {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Center the content horizontally */
+        margin: 20px auto; /* Center the container itself horizontally */
+        max-width: 80vw; /* Ensure the container doesn't exceed 80% of the viewport width */
+        top:10%;
+      }
+      
+      iframe {
+        max-width: 80vw;
+        max-height: 80vh;
+      }
+      
+      .nav-button {
+        background-color: rgba(0, 0, 0, 0.5);
+        border: none;
+        color: white;
+        font-size: 2rem;
+        cursor: pointer;
+        padding: 0.5rem 1rem;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      
+      #prev {
+        left: 0;
+      }
+      
+      #next {
+        right: 0;
+      }
+      
+      .add-video-form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+      }
+      
+      #new-video-url {
+        padding: 0.5rem;
+        font-size: 1rem;
+        width: 300px;
+        margin-right: 10px;
+      }
+      
+      #add-video {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+      /* .overlap-image {
+        position: absolute;
+        top: 32%; /* Center vertically */
+        /* left: 50%; /* Center horizontally */
+        /* transform: translate(-50%, -50%); /* Center the element precisely */
+        /* width:150%; /* Adjust width as needed 
+        height: 450%; /* Automatically adjust height based on width 
+        
+        background-image: url('dd.png'); /* Correct path to your image 
+        background-size: contain; /* Ensure the image fits within the container 
+       background-repeat:no-repeat;
+       background-position: center;
+         */
+      
