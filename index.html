@@ -5,17 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Come and see :D</title>
   <link rel="stylesheet" type="text/css" href="style.css">
-  <link rel="html" type="html" href="about.html">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
   
 
 
-    #About {
-      height: 200vh; /* Full viewport height */
-      position: relative;
-    }
 
     .hero {
       width: 1000px; /* Increased width */
@@ -100,13 +95,22 @@
 
   <!-- About Section -->
   <div class="content" id="About">
-    <div class="video-player">
-      <button id="prev" class="nav-button">&lt;</button>
-      <iframe id="video" width="880" height="500" src="https://www.youtube.com/embed/gQ0-ip-B36A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <button id="next" class="nav-button">&gt;</button>
-    </div>
+    <div class="video-player-container">
+      <div class="video-player">
+          <iframe src="https://www.youtube.com/embed/gQ0-ip-B36A" width="1900px" height="1080px" frameborder="0" allowfullscreen></iframe>
+          <div class="video-caption">
+            <p>"Rainsha" </p>
+            <p1>is a adventure game created by "GENESIS MATRIX"</p1>
+        </div>
+      </div>
+      <button id="prev" class="nav-button">←</button>
+      <button id="next" class="nav-button">→</button>
+  </div>
 
-    <div class="bb" id="bb"></div>
+    <div class="bb" id="bb">
+      
+
+    </div>
   </div>
 
   <!-- Characters Section -->

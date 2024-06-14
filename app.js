@@ -1,4 +1,5 @@
 // JavaScript for auto-typing effect
+
 function typeText(element, text, callback) {
     let index = 0;
     function type() {
