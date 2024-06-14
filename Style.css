@@ -206,6 +206,15 @@ header .deco img {
   z-index: 2;
 }
 
+.content3 {
+  width: 80%;
+  margin-top: 30%;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: right;
+  z-index: 2;
+}
+
 .background-half {
   position: absolute;
   top: 0;
@@ -261,11 +270,14 @@ header .deco img {
     left: 0;
     width: 500%; 
     height:100%;
-    background-image: url('eee.avif');
+    /* background-image: url('eee.avif'); */
     background-size: cover;
     z-index: -1; /* This puts it on top of the other background */
     opacity: 0.8; /* Adjust opacity as needed */
     overflow: hidden;
+
+    linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgb(0, 0, 0)), url("eee.jpeg");
+
   }
   
   .warrior {
@@ -287,7 +299,7 @@ header .deco img {
     
   .section-img-container {
     width: 1000px; /* Increased width */
-    height: 600px; /* Increased height */
+    height: 1600px; /* Increased height */
     position: relative; /* Changed to relative */
     bottom: 10%;
     left: 5%; /* Move more to the left */
@@ -320,9 +332,21 @@ header .deco img {
     font-size: 40px;
     border-radius: 5px;}
 
+    .new-picture-with-text .text-overlay1 {
+      position: absolute;
+      bottom:20%;
+      left: -30%;
+      
+      transform: translateX(-50%);
+      color: rgb(0, 0, 0);
+      
+      
+      font-size: 40px;
+      border-radius: 5px;}
+
     .new-picture-with-text .text-overlay2 {
       position: absolute;
-      bottom:60%;
+      bottom:30%;
       left: -50%;
       
       transform: translateX(-50%);
