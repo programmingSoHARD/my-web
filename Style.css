@@ -208,6 +208,17 @@ header .deco img {
 
 .content3 {
   width: 80%;
+  margin-top: 50%;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: right;
+  z-index: 2;
+  left: -0%;
+ 
+}
+
+.content4 {
+  width: 80%;
   margin-top: 30%;
   margin: 50px auto;
   padding: 20px;
@@ -266,18 +277,21 @@ header .deco img {
   }
   .bb{
     position: absolute;
-    top: -380px;
+    /* top: -380px; */
     left: 0;
     width: 500%; 
     height:100%;
-    /* background-image: url('eee.avif'); */
+    background-image: url('eee.jpeg');
     background-size: cover;
     z-index: -1; /* This puts it on top of the other background */
     opacity: 0.8; /* Adjust opacity as needed */
     overflow: hidden;
-
-    linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgb(0, 0, 0)), url("eee.jpeg");
-
+    /* transition: all 1s ease-in; */
+    
+    /* background-image:
+    -moz-linear-gradient()
+    linear-gradient(to top, rgba(248, 245, 252, 0), rgb(0, 0, 0)), url("eee.jpeg"); */
+    
   }
   
   .warrior {
@@ -364,7 +378,7 @@ header .deco img {
         display: flex;
         justify-content: center; /* Center contents horizontally */
         align-items: center; /* Center contents vertically */
-        margin: 20px auto;
+        margin: 200px auto;
         max-width: 80vw;
     }
     
@@ -375,7 +389,7 @@ header .deco img {
         overflow: hidden;
         border: 10px solid #fff;
         border-radius: 10px; /* Rounded corners for the frame */
-        bottom: -1500px;
+        /* bottom: -1500px; */
     }
     
     .video-player iframe {
@@ -407,7 +421,7 @@ header .deco img {
         height: 3rem; /* Set height to ensure circular shape */
         border-radius: 50%; /* Make the button circular */
         position: absolute;
-        bottom: -210%;
+        /* bottom: -210%; */
         transform: translateY(-50%);
         z-index: 6; /* Ensure buttons are above the video but below .overlap-image */
         display: flex;
@@ -427,9 +441,9 @@ header .deco img {
 
   .bg{
     position: absolute;
-      bottom: -1400px;
+      /* bottom: -1400px; */
       left: 0;
-      top:1170px;
+      /* top:1170px; */
       width: 500%; 
       height:100%;
       background-image: url('vv.webp');
@@ -456,7 +470,7 @@ header .deco img {
   align-items: center;
   text-align: center;
   overflow: hidden;
-  bottom: -1100px;
+  /* bottom: -1100px; */
   right:center center;
   left: center center;
 }
@@ -481,8 +495,8 @@ hr {
 }
 .overlap-image {
   position: fixed;
-  top: 50%;
-  left: 50%;
+  /* top: 50%;
+  left: 50%; */
   transform: translate(-50%, -50%);
   width: 150%; /* Adjust width as needed */
   height: auto; /* Automatically adjust height based on width */
@@ -498,8 +512,8 @@ hr {
 /* Styles for .o2 */
 .o2 {
   position: absolute;
-  top: 50%; /* Adjust as needed */
-  left: 50%; /* Adjust as needed */
+  /* top: 50%; /* Adjust as needed */
+  /* left: 50%; Adjust as needed */ 
   transform: translate(-50%, -50%);
   width: 150%; /* Adjust width as needed */
   height: auto; /* Automatically adjust height based on width */
@@ -510,6 +524,21 @@ hr {
   z-index: 10; /* Place it above .bg and .bgimg */
   pointer-events: none; /* Allow clicks to pass through */
 }
+
+.column {
+  float: left;
+  width: 40%;
+  padding: 5px;
+  
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 
 
 /* top: 159%; 
