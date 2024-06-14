@@ -134,10 +134,9 @@ header .deco img {
 
 
 #About {
-  height: 200vh; /* Full viewport height */
-  width: 100%;
+  height: 100vh; /* Full viewport height */
+  width:100% ;
   position: relative;
-  overflow: hidden;
 }
 
 .hero {
@@ -258,14 +257,14 @@ header .deco img {
   }
   .bb{
     position: absolute;
-    top: -50px;
+    top: -380px;
     left: 0;
     width: 500%; 
-    height:80%;
-    background-image: url('mush.jpeg');
+    height:120%;
+    background-image: url('eee.avif');
     background-size: cover;
     z-index: -1; /* This puts it on top of the other background */
-    opacity: 0.4; /* Adjust opacity as needed */
+    opacity: 0.8; /* Adjust opacity as needed */
   }
   
   .warrior {
@@ -360,7 +359,7 @@ header .deco img {
         overflow: hidden;
         border: 10px solid #fff;
         border-radius: 10px; /* Rounded corners for the frame */
-        top: 400px;
+        bottom: -1500px;
     }
     
     .video-player iframe {
@@ -378,7 +377,7 @@ header .deco img {
         padding: 10px;
         text-align: center;
         box-sizing: border-box;
-        font-size:30px ;
+        font-size:20px ;
     }
     
     .nav-button {
@@ -392,7 +391,7 @@ header .deco img {
         height: 3rem; /* Set height to ensure circular shape */
         border-radius: 50%; /* Make the button circular */
         position: absolute;
-        top: 120%;
+        bottom: -210%;
         transform: translateY(-50%);
         z-index: 6; /* Ensure buttons are above the video but below .overlap-image */
         display: flex;
@@ -411,7 +410,7 @@ header .deco img {
       
       .overlap-image {
     position: absolute;
-    top: 32%; /* Center vertically */
+    top: 46%; /* Center vertically */
     left: 50%; /* Center horizontally */
     transform: translate(-50%, -50%); /* Center the element precisely */
     width: 150%; /* Adjust width as needed */
@@ -423,3 +422,45 @@ header .deco img {
     z-index: 10; /* Set higher z-index to bring it in front */
     pointer-events: none; /* Allow clicks to pass through */
 }
+.bg{
+  position: absolute;
+    bottom: -1400px;
+    left: 0;
+    top:1170px;
+    width: 500%; 
+    height:110%;
+    background-image: url('vv.webp');
+    background-size: cover;
+    z-index: -1; /* This puts it on top of the other background */
+    opacity:0.9 ;
+  }
+
+  .o2{
+    position: absolute;
+    top: 159%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center the element precisely */
+    width: 100%; /* Adjust width as needed */
+    height: 15000%; /* Automatically adjust height based on width */
+    background-image: url('deco4.png'); /* Correct path to your image */
+    background-size: contain; /* Ensure the image fits within the container */
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 10; /* Set higher z-index to bring it in front */
+    pointer-events: none; /* Allow clicks to pass through */
+  }
+
+  .bg2 {
+    position: absolute;
+    bottom: -2343px; /* Adjust this as needed */
+    left: 0;
+    width: 100%; /* Adjust width to fit the viewport or container */
+    height: 100%; /* Ensure height is sufficient */
+    background-image: url('eee.avif');
+    background-size: cover;
+    z-index: -1; /* Adjust to ensure visibility */
+    opacity: 0.9;
+    filter:blur(10px) ;
+  }
+  
+  
