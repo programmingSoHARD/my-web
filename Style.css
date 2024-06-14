@@ -260,11 +260,12 @@ header .deco img {
     top: -380px;
     left: 0;
     width: 500%; 
-    height:120%;
+    height:100%;
     background-image: url('eee.avif');
     background-size: cover;
     z-index: -1; /* This puts it on top of the other background */
     opacity: 0.8; /* Adjust opacity as needed */
+    overflow: hidden;
   }
   
   .warrior {
@@ -272,16 +273,7 @@ header .deco img {
     position:fixed;
     
   }
-  #clock {
-    color: #ffbf00;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 
-    'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 18px;
-    margin-left: 50px;
-    padding: 8px 15px;
-    border-radius: 20px;
-    border: 3px solid #ffbf00;
-  }
+  
   /* characters */
   #section-container {
     background-color: #C0C0C0;
@@ -407,60 +399,101 @@ header .deco img {
         right: 200px;
     }
     
-      
-      .overlap-image {
+    
+
+  .bg{
     position: absolute;
-    top: 46%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Center the element precisely */
-    width: 150%; /* Adjust width as needed */
-    height: 450%; /* Automatically adjust height based on width */
-    background-image: url('dd.png'); /* Correct path to your image */
-    background-size: contain; /* Ensure the image fits within the container */
-    background-repeat: no-repeat;
-    background-position: center;
-    z-index: 10; /* Set higher z-index to bring it in front */
-    pointer-events: none; /* Allow clicks to pass through */
+      bottom: -1400px;
+      left: 0;
+      top:1170px;
+      width: 500%; 
+      height:100%;
+      background-image: url('vv.webp');
+      background-size: cover;
+      z-index: -1; /* This puts it on top of the other background */
+      opacity:0.9 ;
+      overflow: hidden;
+    }
+    
+    .bgimg {
+  background-image: url('mush.jpeg');
+  height: 110vh; /* Adjusted to fit the viewport height */
+  size:cover;
+  background-position: center;
+  background-size: contain; /* Adjusted to contain the image within the element */
+  background-repeat: no-repeat;
+  position: relative;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 25px;
+  z-index: -1; /* Ensure .bgimg is behind other content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  bottom: -1100px;
+  right:center center;
+  left: center center;
 }
-.bg{
+
+.topleft {
   position: absolute;
-    bottom: -1400px;
-    left: 0;
-    top:1170px;
-    width: 500%; 
-    height:110%;
-    background-image: url('vv.webp');
-    background-size: cover;
-    z-index: -1; /* This puts it on top of the other background */
-    opacity:0.9 ;
-  }
+  top: 20px; /* Adjust as needed */
+  left: 10px; /* Adjust as needed */
+}
 
-  .o2{
-    position: absolute;
-    top: 159%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Center the element precisely */
-    width: 100%; /* Adjust width as needed */
-    height: 15000%; /* Automatically adjust height based on width */
-    background-image: url('deco4.png'); /* Correct path to your image */
-    background-size: contain; /* Ensure the image fits within the container */
-    background-repeat: no-repeat;
-    background-position: center;
-    z-index: 10; /* Set higher z-index to bring it in front */
-    pointer-events: none; /* Allow clicks to pass through */
-  }
+.middle {
+  position: absolute;
+  top: 50%; /* Place at vertical center */
+  left: 50%; /* Place at horizontal center */
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
 
-  .bg2 {
-    position: absolute;
-    bottom: -2343px; /* Adjust this as needed */
-    left: 0;
-    width: 100%; /* Adjust width to fit the viewport or container */
-    height: 100%; /* Ensure height is sufficient */
-    background-image: url('eee.avif');
-    background-size: cover;
-    z-index: -1; /* Adjust to ensure visibility */
-    opacity: 0.9;
-    filter:blur(10px) ;
-  }
-  
-  
+hr {
+  margin: auto;
+  width: 40%;
+}
+.overlap-image {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150%; /* Adjust width as needed */
+  height: auto; /* Automatically adjust height based on width */
+  max-height: 100%; /* Ensure it does not exceed the height of the viewport */
+  background-image: url('dd.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 3; /* Place it above .bg and .bgimg */
+  pointer-events: none; /* Allow clicks to pass through */
+}
+
+
+/* Styles for .o2 */
+.o2 {
+  position: absolute;
+  top: 50%; /* Adjust as needed */
+  left: 50%; /* Adjust as needed */
+  transform: translate(-50%, -50%);
+  width: 150%; /* Adjust width as needed */
+  height: auto; /* Automatically adjust height based on width */
+  max-height: 100%; /* Ensure it does not exceed the height of the viewport */
+  background-image: url('deco4.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 10; /* Place it above .bg and .bgimg */
+  pointer-events: none; /* Allow clicks to pass through */
+}
+
+
+/* top: 159%; 
+
+
+
+height: 15000%; 
+background-size: contain; 
+
+background-position: center; */
+

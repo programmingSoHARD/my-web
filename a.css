@@ -1,0 +1,89 @@
+  
+      .overlap-image {
+        position: absolute;
+        top: 46%; /* Center vertically */
+        left: 50%; /* Center horizontally */
+        transform: translate(-50%, -50%); /* Center the element precisely */
+        width: 150%; /* Adjust width as needed */
+        height: 450%; /* Automatically adjust height based on width */
+        background-image: url('dd.png'); /* Correct path to your image */
+        background-size: contain; /* Ensure the image fits within the container */
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: 10; /* Set higher z-index to bring it in front */
+        pointer-events: none; /* Allow clicks to pass through */
+    }
+    .bg{
+      position: absolute;
+        bottom: -1400px;
+        left: 0;
+        top:1170px;
+        width: 500%; 
+        height:110%;
+        background-image: url('vv.webp');
+        background-size: cover;
+        z-index: -1; /* This puts it on top of the other background */
+        opacity:0.9 ;
+      }
+    
+      .o2{
+        position: absolute;
+        top: 159%; /* Center vertically */
+        left: 50%; /* Center horizontally */
+        transform: translate(-50%, -50%); /* Center the element precisely */
+        width: 100%; /* Adjust width as needed */
+        height: 15000%; /* Automatically adjust height based on width */
+        background-image: url('deco4.png'); /* Correct path to your image */
+        background-size: contain; /* Ensure the image fits within the container */
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: 10; /* Set higher z-index to bring it in front */
+        pointer-events: none; /* Allow clicks to pass through */
+      }
+    
+      .bg{
+      position: absolute;
+        bottom: -1400px;
+        left: 0;
+        top:1170px;
+        width: 500%; 
+        height:110%;
+        background-image: url('vv.webp');
+        background-size: cover;
+        z-index: -1; /* This puts it on top of the other background */
+        opacity:0.9 ;
+      }
+      .bgimg {
+        background-image: url('/w3images/forestbridge.jpg');
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        color: white;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 25px;
+      }
+      
+      .topleft {
+        position: absolute;
+        top: 0;
+        left: 16px;
+      }
+      
+      .bottomleft {
+        position: absolute;
+        bottom: 0;
+        left: 16px;
+      }
+      
+      .middle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+      
+      hr {
+        margin: auto;
+        width: 40%;}
