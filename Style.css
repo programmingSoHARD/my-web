@@ -409,6 +409,18 @@ header .deco img {
         box-sizing: border-box;
         font-size:20px ;
     }
+    .video-d {
+      position: absolute;
+      bottom: -50px;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+      color: rgb(17, 12, 87); /* Text color */
+      padding: 10px;
+      text-align: center;
+      box-sizing: border-box;
+      font-size: 20px;
+  }
     
     .nav-button {
         background-color: white; /* Set background color to white */
@@ -455,7 +467,8 @@ header .deco img {
     
     .bgimg {
   background-image: url('mush.jpeg');
-  height: 110vh; /* Adjusted to fit the viewport height */
+  height: 105vh; /* Adjusted to fit the viewport height */
+  left:3px;
   size:cover;
   background-position: center;
   background-size: contain; /* Adjusted to contain the image within the element */
@@ -470,7 +483,7 @@ header .deco img {
   align-items: center;
   text-align: center;
   overflow: hidden;
-  /* bottom: -1100px; */
+  
   right:center center;
   left: center center;
 }
@@ -487,6 +500,16 @@ header .deco img {
   left: 50%; /* Place at horizontal center */
   transform: translate(-50%, -50%);
   text-align: center;
+}
+.bottom {
+  position: absolute;
+  bottom: 20px; /* Adjusted for a small gap from the bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 18px; /* Increased font size for better visibility */
+  color: rgba(255, 255, 255, 1); /* Ensure the text color is white and visible */
+  z-index: 1;
 }
 
 hr {
@@ -524,20 +547,23 @@ hr {
   z-index: 10; /* Place it above .bg and .bgimg */
   pointer-events: none; /* Allow clicks to pass through */
 }
+.row {
+  display:flex;
+  justify-content: left;
+  align-items:center ;
+  
+}
 
 .column {
-  float: left;
+  float:left;
   width: 40%;
-  padding: 5px;
+  padding-left: 5px;
+
   
 }
 
 /* Clearfix (clear floats) */
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
+
 
 
 
