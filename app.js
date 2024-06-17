@@ -62,3 +62,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
             loadVideo(currentVideoIndex);
         });
+        document.getElementById('websiteUrl').textContent = window.location.href;
